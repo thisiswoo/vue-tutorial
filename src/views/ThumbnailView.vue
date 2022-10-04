@@ -19,15 +19,15 @@
 </template>
 
 <script>
-import HeaderDiv from "../components/thumbnail/HeaderDiv.vue";
-import PreviewDiv from "../components/thumbnail/PreviewDiv.vue";
-import InputFieldsDiv from "../components/thumbnail/InputFieldsDiv.vue";
-import BackgroundBtnsDiv from "../components/thumbnail/BackgroundBtnsDiv.vue";
-import ComponentsBtnsDiv from "../components/thumbnail/ComponentsBtnsDiv.vue";
-import TextStyleDiv from "../components/thumbnail/TextStyleDiv.vue";
-import MasterPanelDiv from "../components/thumbnail/MasterPanelDiv.vue";
-import FooterDiv from "../components/thumbnail/FooterDiv.vue";
-import CaptureModalSec from "../components/thumbnail/CaptureModalSec.vue";
+import HeaderDiv from "../components/thumbnail/layouts/HeaderDiv.vue";
+import PreviewDiv from "../components/thumbnail/layouts/PreviewDiv.vue";
+import InputFieldsDiv from "../components/thumbnail/layouts/InputFieldsDiv.vue";
+import BackgroundBtnsDiv from "../components/thumbnail/layouts/BackgroundBtnsDiv.vue";
+import ComponentsBtnsDiv from "../components/thumbnail/layouts/ComponentsBtnsDiv.vue";
+import TextStyleDiv from "../components/thumbnail/layouts/TextStyleDiv.vue";
+import MasterPanelDiv from "../components/thumbnail/layouts/MasterPanelDiv.vue";
+import FooterDiv from "../components/thumbnail/layouts/FooterDiv.vue";
+import CaptureModalSec from "../components/thumbnail/layouts/CaptureModalSec.vue";
 
 export default {
   name: "App",

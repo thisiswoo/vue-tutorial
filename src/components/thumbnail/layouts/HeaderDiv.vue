@@ -4,7 +4,7 @@
     <p>썸네일 메이커</p>
     <div class="author">
       <a class="logo" href="https://thisiswoo.vercel.app/" target="_blank">
-        <img src="../../assets/sidebar-bg.png" />
+        <img src="../../../assets/sidebar-bg.png" />
         <span class="user">thisiswoo</span>
       </a>
     </div>

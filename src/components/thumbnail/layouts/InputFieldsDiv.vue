@@ -21,11 +21,16 @@
       spellcheck="false"
       placeholder="분류를 입력하세요"
     />
+    <!-- <InputDiv /> -->
   </div>
 </template>
 
 <script>
-export default {};
+// import InputDiv from "../input/InputDiv.vue";
+
+export default {
+  // components: InputDiv,
+};
 </script>
 
 <style>

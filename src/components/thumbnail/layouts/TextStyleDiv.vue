@@ -26,4 +26,30 @@ export default {};
 .btns {
   float: right;
 }
+
+/* .btn {
+  width: 192px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f4f4f4;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.4s ease,
+    transform 0.4s ease;
+}
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(1.05);
+  opacity: 0.2;
+}
+.btn:hover {
+  background-color: #3b45ff;
+  color: #fff;
+} */
 </style>

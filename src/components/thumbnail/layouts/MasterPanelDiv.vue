@@ -24,7 +24,7 @@ export default {};
   color: #fff;
 }
 .master__panel .btn:last-child:hover {
-  background-color: #3b45ff;
+  background-color: #6667ab;
   color: #fff;
 }
 </style>

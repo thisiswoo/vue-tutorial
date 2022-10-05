@@ -52,7 +52,7 @@ input.input__field {
   padding-left: 14px;
 }
 .input__field:focus {
-  background-color: #3b45ff;
+  background-color: #6667ab;
   color: #fff;
   outline: none;
 }

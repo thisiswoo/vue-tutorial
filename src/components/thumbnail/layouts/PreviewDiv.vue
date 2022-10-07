@@ -1,15 +1,17 @@
 <template>
   <div id="capture" class="preview">
-    <ul class="components" id="comp__opt1">
+    <div class="components" id="comp__opt1">
       <li class="render title">제목을 입력하세요</li>
       <li class="render subtitle">부제목을 입력하세요</li>
       <li class="render category">분류를 입력하세요</li>
-    </ul>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  components: {},
+};
 </script>
 
 <style>

@@ -19,6 +19,8 @@
 </template>
 
 <script>
+// import html2canvas from "html2canvas";
+
 import HeaderDiv from "../components/thumbnail/layouts/HeaderDiv.vue";
 import PreviewDiv from "../components/thumbnail/layouts/PreviewDiv.vue";
 import InputFieldsDiv from "../components/thumbnail/layouts/InputFieldsDiv.vue";

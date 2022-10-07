@@ -1,11 +1,14 @@
 <template>
   <div class="inputFields">
+    <!-- TitleValue: {{ titleValue }} -->
     <input
       class="input__field input__title"
       data-set="title"
       type="text"
       spellcheck="false"
       placeholder="제목을 입력하세요"
+      :value="titleValue"
+      @input="(event) => $emit('update:title', event.target.value)"
     />
     <input
       class="input__field input__subtitle"
@@ -26,10 +29,8 @@
 </template>
 
 <script>
-// import InputDiv from "../input/InputDiv.vue";
-
 export default {
-  // components: InputDiv,
+  components: {},
 };
 </script>
 

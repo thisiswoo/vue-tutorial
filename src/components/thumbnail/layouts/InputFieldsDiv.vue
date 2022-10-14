@@ -1,14 +1,12 @@
 <template>
   <div class="inputFields">
-    <!-- TitleValue: {{ titleValue }} -->
     <input
       class="input__field input__title"
       data-set="title"
       type="text"
       spellcheck="false"
       placeholder="제목을 입력하세요"
-      :value="titleValue"
-      @input="(event) => $emit('update:title', event.target.value)"
+      v-model="titleValue"
     />
     <input
       class="input__field input__subtitle"
@@ -24,12 +22,28 @@
       spellcheck="false"
       placeholder="분류를 입력하세요"
     />
-    <!-- <InputDiv /> -->
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
+  data() {
+    return {
+      titleValue: "",
+    };
+  },
+  methods: {
+    ...mapActions(["setTitle"]),
+  },
+  watch: {
+    titleValue(newVal, oldVal) {
+      this.setTitle(newVal);
+      console.log("newVal : ", newVal, " oldVal : ", oldVal);
+    },
+  },
+  computed: {},
   components: {},
 };
 </script>

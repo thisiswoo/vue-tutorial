@@ -1,15 +1,24 @@
 <template>
   <div id="capture" class="preview">
     <div class="components" id="comp__opt1">
-      <li class="render title">제목을 입력하세요</li>
-      <li class="render subtitle">부제목을 입력하세요</li>
-      <li class="render category">분류를 입력하세요</li>
+      <li class="render title">
+        {{ title === "" ? "제목을 입력하세요." : title }}
+      </li>
+      <li class="render subtitle">{{ subTitle }}부제목을 입력하세요</li>
+      <li class="render category">{{ category }}분류를 입력하세요</li>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
+  name: "PreviewDiv",
+  methods: {},
+  computed: {
+    ...mapState(["title", "subTitle", "category"]),
+  },
   components: {},
 };
 </script>

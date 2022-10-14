@@ -3,7 +3,7 @@
     <section class="wrapper">
       <article class="contents">
         <HeaderDiv />
-        <PreviewDiv />
+        <PreviewDiv :title="title" :subTitle="subTitle" :category="category" />
         <div class="control__panel">
           <InputFieldsDiv />
           <BackgroundBtnsDiv />
@@ -30,9 +30,17 @@ import TextStyleDiv from "../components/thumbnail/layouts/TextStyleDiv.vue";
 import MasterPanelDiv from "../components/thumbnail/layouts/MasterPanelDiv.vue";
 import FooterDiv from "../components/thumbnail/layouts/FooterDiv.vue";
 import CaptureModalSec from "../components/thumbnail/layouts/CaptureModalSec.vue";
+import { mapState } from "vuex";
 
 export default {
   name: "App",
+  data() {
+    return {};
+  },
+  methods: {},
+  computed: {
+    ...mapState(["title", "subTitle", "category"]),
+  },
   components: {
     HeaderDiv,
     PreviewDiv,

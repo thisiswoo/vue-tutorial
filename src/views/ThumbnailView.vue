@@ -30,14 +30,11 @@ import TextStyleDiv from "../components/thumbnail/layouts/TextStyleDiv.vue";
 import MasterPanelDiv from "../components/thumbnail/layouts/MasterPanelDiv.vue";
 import FooterDiv from "../components/thumbnail/layouts/FooterDiv.vue";
 import CaptureModalSec from "../components/thumbnail/layouts/CaptureModalSec.vue";
+
 import { mapState } from "vuex";
 
 export default {
   name: "App",
-  data() {
-    return {};
-  },
-  methods: {},
   computed: {
     ...mapState(["title", "subTitle", "category"]),
   },

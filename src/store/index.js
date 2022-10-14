@@ -13,12 +13,23 @@ export default createStore({
     setTitle(state, payload) {
       state.title = payload;
     },
+    setSubTitle(state, payload) {
+      state.subTitle = payload;
+    },
+    setCategory(state, payload) {
+      state.category = payload;
+    },
   },
   //
   actions: {
     setTitle({ commit }, title) {
       commit("setTitle", title);
     },
+    setSubTitle({ commit }, subTitle) {
+      commit("setSubTitle", subTitle);
+    },
+    setCategory({ commit }, category) {
+      commit("setCategory", category);
+    },
   },
-  modules: {},
 });

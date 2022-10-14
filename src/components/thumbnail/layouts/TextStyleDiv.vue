@@ -14,16 +14,5 @@ export default {};
 </script>
 
 <style>
-.text__style {
-  height: 70px;
-  line-height: 68px;
-  border-bottom: 1px solid #cacaca;
-}
-.textstyle__txt {
-  color: #666666;
-  font-weight: 500;
-}
-.btns {
-  float: right;
-}
+@import "../../../assets/css/layouts/textStyleDiv.css";
 </style>

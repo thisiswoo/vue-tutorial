@@ -1,0 +1,12 @@
+.components__btns {
+  height: 70px;
+  line-height: 68px;
+  border-bottom: 1px solid #cacaca;
+}
+.components__txt {
+  color: #666666;
+  font-weight: 500;
+}
+.btns {
+  float: right;
+}

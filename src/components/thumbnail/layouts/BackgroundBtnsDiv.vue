@@ -14,20 +14,5 @@ export default {};
 </script>
 
 <style>
-.background__btns {
-  margin-top: 20px;
-  border-top: 1px solid #cacaca;
-}
-.background__btns {
-  height: 70px;
-  line-height: 68px;
-  border-bottom: 1px solid #cacaca;
-}
-.background__txt {
-  color: #666666;
-  font-weight: 500;
-}
-.btns {
-  float: right;
-}
+@import "../../../assets/css/layouts/backgroundBtnDiv.css";
 </style>

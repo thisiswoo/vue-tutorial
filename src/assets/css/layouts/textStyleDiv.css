@@ -1,0 +1,12 @@
+.text__style {
+  height: 70px;
+  line-height: 68px;
+  border-bottom: 1px solid #cacaca;
+}
+.textstyle__txt {
+  color: #666666;
+  font-weight: 500;
+}
+.btns {
+  float: right;
+}

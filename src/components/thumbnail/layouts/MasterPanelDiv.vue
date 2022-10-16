@@ -10,21 +10,5 @@ export default {};
 </script>
 
 <style>
-.master__panel {
-  margin-top: 50px;
-  text-align: center;
-}
-.master__panel .btn {
-  border-radius: 0;
-  margin-right: 10px;
-}
-.master__panel .btn:last-child {
-  margin-right: 0;
-  background-color: #888;
-  color: #fff;
-}
-.master__panel .btn:last-child:hover {
-  background-color: #6667ab;
-  color: #fff;
-}
+@import "../../../assets/css/layouts/masterPanelDiv.css";
 </style>

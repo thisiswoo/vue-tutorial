@@ -4,6 +4,9 @@
       ⓒ This website is built based on the
       <a href="https://velog.io/@oneook" target="_blank">Lee Wonkook's</a>
       website.
+      <br />
+      I would like to express my gratitude to Bongseok Sa, who helped create the
+      site.
     </p>
     <p class="unsplash">Images from Unsplash</p>
   </div>
@@ -14,23 +17,5 @@ export default {};
 </script>
 
 <style>
-a,
-a:active {
-  text-decoration: none;
-  color: #000;
-}
-.footer {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-}
-.author {
-  color: #fff;
-  display: inline-block;
-}
-.unsplash {
-  color: #ffffff;
-  font-weight: 300;
-  font-size: 12px;
-}
+@import "../../../assets/css/layouts/footerDiv.css";
 </style>

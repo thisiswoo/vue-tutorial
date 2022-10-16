@@ -1,0 +1,19 @@
+a,
+a:active {
+  text-decoration: none;
+  color: #000;
+}
+.footer {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.author {
+  color: #000;
+  display: inline-block;
+}
+.unsplash {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 12px;
+}

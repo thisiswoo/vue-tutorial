@@ -39,19 +39,27 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["setTitle", "setSubTitle", "setCategory"]),
+    // ...mapActions(["setTitle", "setSubTitle", "setCategory"]),
+    ...mapActions([
+      "setActionsTitle",
+      "setActionsSubTitle",
+      "setActionsCategory",
+    ]),
   },
   watch: {
     titleValue(newVal, oldVal) {
-      this.setTitle(newVal);
+      // this.setTitle(newVal);
+      this.setActionsTitle(newVal);
       console.log("title --------> newVal : ", newVal, " oldVal : ", oldVal);
     },
     subTitleValue(newVal, oldVal) {
-      this.setSubTitle(newVal);
+      // this.setSubTitle(newVal);
+      this.setActionsSubTitle(newVal);
       console.log("subTitle --------> newVal : ", newVal, " oldVal : ", oldVal);
     },
     categoryValue(newVal, oldVal) {
-      this.setCategory(newVal);
+      // this.setCategory(newVal);
+      this.setActionsCategory(newVal);
       console.log("category --------> newVal : ", newVal, " oldVal : ", oldVal);
     },
   },

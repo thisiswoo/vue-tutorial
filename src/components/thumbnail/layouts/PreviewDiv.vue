@@ -1,6 +1,6 @@
 <template>
   <div id="capture" class="preview">
-    <div class="components" id="comp__opt1">
+    <ul class="components" id="comp__opt1">
       <li class="render title">
         {{ title === "" ? "제목을 입력하세요." : title }}
       </li>
@@ -10,7 +10,7 @@
       <li class="render category">
         {{ category === "" ? "분류를 입력하세요." : category }}
       </li>
-    </div>
+    </ul>
   </div>
 </template>
 

@@ -22,13 +22,17 @@ export default createStore({
   },
   //
   actions: {
-    setTitle({ commit }, title) {
+    // setTitle({ commit }, title) {
+    setActionsTitle({ commit }, title) {
+      console.log("title : ", title);
+      // console.log("commit : ", commit.ty);
       commit("setTitle", title);
     },
-    setSubTitle({ commit }, subTitle) {
+    // setSubTitle({ commit }, subTitle) {
+    setActionsSubTitle({ commit }, subTitle) {
       commit("setSubTitle", subTitle);
     },
-    setCategory({ commit }, category) {
+    setActionsCategory({ commit }, category) {
       commit("setCategory", category);
     },
   },

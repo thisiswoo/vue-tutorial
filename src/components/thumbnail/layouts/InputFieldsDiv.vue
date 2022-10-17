@@ -40,6 +40,7 @@ export default {
   },
   methods: {
     // ...mapActions(["setTitle", "setSubTitle", "setCategory"]),
+    // index.js에서 Actions의 함수를 호출.
     ...mapActions([
       "setActionsTitle",
       "setActionsSubTitle",
@@ -47,20 +48,36 @@ export default {
     ]),
   },
   watch: {
-    titleValue(newVal, oldVal) {
+    // titleValue(newVal, oldVal) {
+    titleValue(newTitleVal, oldTitleVal) {
       // this.setTitle(newVal);
-      this.setActionsTitle(newVal);
-      console.log("title --------> newVal : ", newVal, " oldVal : ", oldVal);
+      this.setActionsTitle(newTitleVal);
+      console.log(
+        "title > newTitleVal : ",
+        newTitleVal,
+        " oldTitleVal : ",
+        oldTitleVal
+      );
     },
-    subTitleValue(newVal, oldVal) {
+    subTitleValue(newSubTitleVal, oldSubTitleVal) {
       // this.setSubTitle(newVal);
-      this.setActionsSubTitle(newVal);
-      console.log("subTitle --------> newVal : ", newVal, " oldVal : ", oldVal);
+      this.setActionsSubTitle(newSubTitleVal);
+      console.log(
+        "subTitle > newSubTitleVal : ",
+        newSubTitleVal,
+        " oldSubTitleVal : ",
+        oldSubTitleVal
+      );
     },
-    categoryValue(newVal, oldVal) {
+    categoryValue(newCategoryVal, oldCategoryVal) {
       // this.setCategory(newVal);
-      this.setActionsCategory(newVal);
-      console.log("category --------> newVal : ", newVal, " oldVal : ", oldVal);
+      this.setActionsCategory(newCategoryVal);
+      console.log(
+        "category > newCategoryVal : ",
+        newCategoryVal,
+        " oldCategoryVal : ",
+        oldCategoryVal
+      );
     },
   },
 };

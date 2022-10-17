@@ -51,6 +51,18 @@ export default createStore({
         .toString(16)
         .padStart(2, "0");
     },
+    // setChangeGradient() {
+    //   const rgb1 = randomRGB();
+    //   const rgb2 = randomRGB();
+
+    //   [...backgroundBtns].forEach((e) => {
+    //     e.classList.remove('selected');
+    //   });
+    //   randomGradientBtn.classList.add('selected');
+
+    //   domBody.style.background = `linear-gradient(to bottom, #${rgb1}, #${rgb2})`;
+    //   preview.style.background = `linear-gradient(to bottom, #${rgb1}, #${rgb2})`;
+    // },
   },
   // mutations 호출 ex) ajax와 비슷
   actions: {

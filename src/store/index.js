@@ -7,9 +7,25 @@ export default createStore({
     title: "",
     subTitle: "",
     category: "",
+    rgb: "",
   },
   // 복잡한 연산을 할때 사용, vue에서는 computed와 비슷하다.
-  getters: {},
+  getters: {
+    // BackgroundBtnsDiv 에서 사용할 랜덤 그라디언트
+    // randomGradient(state) {
+    //   let rgb = state.rgb;
+    //   rgb += (Math.floor(Math.random() * 90 + 1) + 150)
+    //     .toString(16)
+    //     .padStart(2, "0");
+    //   rgb += (Math.floor(Math.random() * 90 + 1) + 150)
+    //     .toString(16)
+    //     .padStart(2, "0");
+    //   rgb += (Math.floor(Math.random() * 90 + 1) + 150)
+    //     .toString(16)
+    //     .padStart(2, "0");
+    //   return rgb;
+    // },
+  },
   // actions에서 받아온 매개변수를 초기화 해주는 것.
   // vue 에서 함수 역할을 함.
   mutations: {
@@ -22,6 +38,18 @@ export default createStore({
     },
     setMutationsCategory(state, newCategoryVal) {
       state.category = newCategoryVal;
+    },
+    setMutationsRandomGradient(state) {
+      state.rgb = "";
+      state.rgb += (Math.floor(Math.random() * 90 + 1) + 150)
+        .toString(16)
+        .padStart(2, "0");
+      state.rgb += (Math.floor(Math.random() * 90 + 1) + 150)
+        .toString(16)
+        .padStart(2, "0");
+      state.rgb += (Math.floor(Math.random() * 90 + 1) + 150)
+        .toString(16)
+        .padStart(2, "0");
     },
   },
   // mutations 호출 ex) ajax와 비슷
@@ -41,5 +69,8 @@ export default createStore({
       // commit("setCategory", category);
       commit("setMutationsCategory", newCategoryVal);
     },
+    // setActionsRandomGradient({ commit }, newRndGrdVal) {
+    //   commit("setMutationsRandomGradient", newRndGrdVal);
+    // },
   },
 });

@@ -12,22 +12,40 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
+  data() {
+    return {
+      // 초기화 시켜주기
+      randomGradient1: "",
+      randomGradient2: "",
+    };
+  },
   methods: {
+    // 봉석씨에게 물어보기.
+    // ...mapMutations(["setMutationsRandomGradient"]),
+    ...mapMutations({ randomGrd: "setMutationsRandomGradient" }),
     randomGradient() {
-      let rgb = "";
-      rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-        .toString(16)
-        .padStart(2, "0");
-      rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-        .toString(16)
-        .padStart(2, "0");
-      rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-        .toString(16)
-        .padStart(2, "0");
-      return rgb;
+      this.randomGrd();
+      this.randomGradient1 = this.$store.state.rgb;
+      console.log("this.randomGradient1 > ", this.randomGradient1);
+      this.randomGrd();
+      this.randomGradient2 = this.$store.state.rgb;
+      console.log("this.randomGradient2 > ", this.randomGradient2);
     },
   },
+  computed: {
+    // ...mapGetters(["randomGradient"]),
+    // randomGradient: "getRandomGradient",
+    // ...mapActions(["setActionsRandomGradient"]),
+  },
+  // watch: {
+  //   rndGrdValue(newVal, oldVal) {
+  //     this.setActionsRandomGradient(newVal);
+  //     console.log("new rndGrd : ", newVal, " old rndGrd : ", oldVal);
+  //   },
+  // },
 };
 </script>
 

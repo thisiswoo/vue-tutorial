@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="first-div"> -->
   <section class="wrapper">
     <article class="contents">
       <HeaderDiv />
@@ -15,7 +14,6 @@
     <FooterDiv />
   </section>
   <CaptureModalSec />
-  <!-- </div> -->
 </template>
 
 <script>

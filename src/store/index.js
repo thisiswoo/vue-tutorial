@@ -51,7 +51,7 @@ export default createStore({
     setMutationsCategory(state, newCategoryVal) {
       state.category = newCategoryVal;
     },
-    setMutationsRandomGradient(state) {
+    setMutationsRandomRGB(state) {
       state.rgb = "";
       state.rgb += (Math.floor(Math.random() * 90 + 1) + 150)
         .toString(16)

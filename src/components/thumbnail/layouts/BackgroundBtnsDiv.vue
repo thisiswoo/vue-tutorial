@@ -44,17 +44,8 @@ export default {
     randomRGB() {
       this.rndRGB();
       this.randomRgb1 = this.$store.state.rgb;
-      console.log("this.randomGradient1 > ", this.randomRgb1);
       this.rndRGB();
       this.randomRgb2 = this.$store.state.rgb;
-      console.log("this.randomGradient2 > ", this.randomRgb2);
-
-      // for (let i = 0; i < this.refContainerVal.children.length; i++) {
-      //   console.log("arry ref", this.refContainerVal.children[i]);
-      //   this.refContainerVal.children[i].classList.remove("selected");
-      // }
-      // this.refRandomRgbVal.classList.add("selected");
-      console.log("this.refRandomRgbVal : ", this.refRandomRgbVal);
 
       this.preview = document.querySelector(".preview");
       this.preview.style.background = `linear-gradient(to bottom, #${this.randomRgb1}, #${this.randomRgb2})`;
@@ -62,23 +53,13 @@ export default {
     },
     refContainer(e) {
       this.refContainerVal = e;
-      console.log("this.refContainerVal : ", this.refContainerVal);
     },
     refRandomRgbBtn(e) {
-      console.log("e.randomRGB : ", e);
       this.refRandomRgbVal = e;
     },
     randomSolid() {
       this.rndRGB();
       this.randomSolidRgb = this.$store.state.rgb;
-      console.log("this.randomGradient1 > ", this.randomRgb1);
-
-      // for (let i = 0; i < this.refContainerVal.children.length; i++) {
-      //   console.log("arry ref", this.refContainerVal.children[i]);
-      //   this.refContainerVal.children[i].classList.remove("selected");
-      // }
-      // this.refRandomRgbVal.classList.add("selected");
-      console.log("this.refRandomRgbVal : ", this.refRandomRgbVal);
 
       this.preview = document.querySelector(".preview");
       this.preview.style.background = `linear-gradient(to bottom, #${this.randomSolidRgb}, #${this.randomSolidRgb})`;

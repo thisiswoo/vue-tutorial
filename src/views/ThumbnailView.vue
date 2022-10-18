@@ -1,21 +1,21 @@
 <template>
-  <div class="first-div">
-    <section class="wrapper">
-      <article class="contents">
-        <HeaderDiv />
-        <PreviewDiv :title="title" :subTitle="subTitle" :category="category" />
-        <div class="control__panel">
-          <InputFieldsDiv />
-          <BackgroundBtnsDiv />
-          <ComponentsBtnsDiv />
-          <TextStyleDiv />
-          <MasterPanelDiv />
-        </div>
-      </article>
-      <FooterDiv />
-    </section>
-    <CaptureModalSec />
-  </div>
+  <!-- <div class="first-div"> -->
+  <section class="wrapper">
+    <article class="contents">
+      <HeaderDiv />
+      <PreviewDiv :title="title" :subTitle="subTitle" :category="category" />
+      <div class="control__panel">
+        <InputFieldsDiv />
+        <BackgroundBtnsDiv />
+        <ComponentsBtnsDiv />
+        <TextStyleDiv />
+        <MasterPanelDiv />
+      </div>
+    </article>
+    <FooterDiv />
+  </section>
+  <CaptureModalSec />
+  <!-- </div> -->
 </template>
 
 <script>

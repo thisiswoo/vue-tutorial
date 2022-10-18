@@ -84,5 +84,5 @@ export default {
 </script>
 
 <style>
-@import "../../../assets/css/layouts/inputFieldsDiv.css";
+@import "../../../assets/css/thumbnail/layouts/inputFieldsDiv.css";
 </style>

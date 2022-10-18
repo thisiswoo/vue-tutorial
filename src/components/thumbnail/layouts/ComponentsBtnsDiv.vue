@@ -18,5 +18,5 @@ export default {};
 </script>
 
 <style>
-@import "../../../assets/css/layouts/componentsBtnsDiv.css";
+@import "../../../assets/css/thumbnail/layouts/componentsBtnsDiv.css";
 </style>

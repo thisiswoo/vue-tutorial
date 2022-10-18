@@ -14,5 +14,5 @@ export default {};
 </script>
 
 <style>
-@import "../../../assets/css/layouts/textStyleDiv.css";
+@import "../../../assets/css/thumbnail/layouts/textStyleDiv.css";
 </style>

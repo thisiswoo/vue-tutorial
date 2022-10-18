@@ -53,5 +53,5 @@ export default {
 </script>
 
 <style>
-@import "../assets/css/thumbnailView.css";
+@import "../assets/css/thumbnail/thumbnailView.css";
 </style>

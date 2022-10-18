@@ -10,5 +10,5 @@ export default {};
 </script>
 
 <style>
-@import "../../../assets/css/layouts/masterPanelDiv.css";
+@import "../../../assets/css/thumbnail/layouts/masterPanelDiv.css";
 </style>

@@ -14,12 +14,12 @@
 <script>
 import { mapMutations } from "vuex";
 
-const domBody = document.body;
-const preview = document.querySelector(".preview");
-const randomGradientBtn = document.querySelector(".random__gradient");
-const backgroundBtns = document.querySelector(
-  "#background__btn__container"
-).children;
+// const domBody = document.body;
+// const preview = document.querySelector(".preview");
+// const randomGradientBtn = document.querySelector(".random__gradient");
+// const backgroundBtns = document.querySelector(
+//   "#background__btn__container"
+// ).children;
 
 export default {
   data() {
@@ -41,29 +41,31 @@ export default {
       this.randomGradient2 = this.$store.state.rgb;
       console.log("this.randomGradient2 > ", this.randomGradient2);
 
-      this.changeGradient();
+      // preview.style.background = `linear-gradient(to bottom, #${this.rgb1}, #${this.rgb2})`;
+      // this.changeGradient();
     },
-    changeGradient() {
-      this.rgb1 = this.randomGrd();
-      this.rgb2 = this.randomGrd();
+    mounted() {},
+    // changeGradient() {
+    //   this.rgb1 = this.randomGrd();
+    //   this.rgb2 = this.randomGrd();
 
-      console.log("this.rgb1 > ", this.rgb1);
-      console.log("this.rgb2 > ", this.rgb2);
+    //   console.log("this.rgb1 > ", this.rgb1);
+    //   console.log("this.rgb2 > ", this.rgb2);
 
-      // [...backgroundBtns].forEach((e) => {
-      //   e.classList.remove("selected");
-      // });
-      // backgroundBtns.forEach((e) => {
-      //   e.classList.remove("selected");
-      // });
-      for (let i = 0; i < backgroundBtns.length; i++) {
-        backgroundBtns[i].classList.remove("selected");
-      }
-      randomGradientBtn.classList.add("selected");
+    // [...backgroundBtns].forEach((e) => {
+    //   e.classList.remove("selected");
+    // });
+    // backgroundBtns.forEach((e) => {
+    //   e.classList.remove("selected");
+    // });
+    //   for (let i = 0; i < backgroundBtns.length; i++) {
+    //     backgroundBtns[i].classList.remove("selected");
+    //   }
+    //   randomGradientBtn.classList.add("selected");
 
-      domBody.style.background = `linear-gradient(to bottom, #${this.rgb1}, #${this.rgb2})`;
-      preview.style.background = `linear-gradient(to bottom, #${this.rgb1}, #${this.rgb2})`;
-    },
+    //   domBody.style.background = `linear-gradient(to bottom, #${this.rgb1}, #${this.rgb2})`;
+    // preview.style.background = `linear-gradient(to bottom, #${this.rgb1}, #${this.rgb2})`;
+    // },
     // randomGradientBtn.addEventListener('click', changeGradient);
   },
   computed: {
@@ -81,5 +83,5 @@ export default {
 </script>
 
 <style>
-@import "../../../assets/css/layouts/backgroundBtnDiv.css";
+@import "../../../assets/css/thumbnail/layouts/backgroundBtnDiv.css";
 </style>

@@ -26,5 +26,5 @@ export default {
 </script>
 
 <style>
-@import "../../../assets/css/layouts/previewDiv.css";
+@import "../../../assets/css/thumbnail/layouts/previewDiv.css";
 </style>

@@ -17,5 +17,5 @@ export default {};
 </script>
 
 <style>
-@import "../../../assets/css/layouts/footerDiv.css";
+@import "../../../assets/css/thumbnail/layouts/footerDiv.css";
 </style>

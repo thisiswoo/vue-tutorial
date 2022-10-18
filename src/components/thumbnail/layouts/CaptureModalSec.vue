@@ -8,5 +8,5 @@ export default {};
 </script>
 
 <style>
-@import "../../../assets/css/layouts/captureModalSec.css";
+@import "../../../assets/css/thumbnail/layouts/captureModalSec.css";
 </style>

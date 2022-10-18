@@ -9,7 +9,13 @@
       >
         랜덤 그라디언트
       </button>
-      <button class="btn random__solid bgb">랜덤 단색</button>
+      <button
+        :ref="refRandomSolidBtn"
+        class="btn random__solid bgb"
+        @click="randomSolid"
+      >
+        랜덤 단색
+      </button>
       <button class="btn img__url bgb">이미지 URL</button>
     </div>
   </div>
@@ -17,13 +23,6 @@
 
 <script>
 import { mapMutations } from "vuex";
-
-// const domBody = document.body;
-// const preview = document.querySelector(".preview");
-// const randomGradientBtn = document.querySelector(".random__gradient");
-// const backgroundBtns = document.querySelector(
-//   "#background__btn__container"
-// ).children;
 
 export default {
   data() {
@@ -37,11 +36,10 @@ export default {
       rgb2: "",
       domBody: document.body,
       preview: null,
+      randomSolidVal: "",
     };
   },
   methods: {
-    // 봉석씨에게 물어보기.
-    // ...mapMutations(["setMutationsRandomGradient"]),
     ...mapMutations({ rndRGB: "setMutationsRandomRGB" }),
     randomRGB() {
       this.rndRGB();
@@ -51,9 +49,9 @@ export default {
       this.randomRgb2 = this.$store.state.rgb;
       console.log("this.randomGradient2 > ", this.randomRgb2);
 
-      for (let i = 0; i < this.refContainerVal.length; i++) {
-        console.log("arry ref", this.refContainerVal[i]);
-        this.refContainerVal[i].classList.remove("selected");
+      for (let i = 0; i < this.refContainerVal.children.length; i++) {
+        console.log("arry ref", this.refContainerVal.children[i]);
+        this.refContainerVal.children[i].classList.remove("selected");
       }
       this.refRandomRgbVal.classList.add("selected");
       console.log("this.refRandomRgbVal : ", this.refRandomRgbVal);
@@ -63,49 +61,34 @@ export default {
       this.domBody.style.background = `linear-gradient(to bottom, #${this.randomRgb1}, #${this.randomRgb2})`;
     },
     refContainer(e) {
-      console.log("e.children : ", e.children);
-      this.refContainerVal = e.children;
+      this.refContainerVal = e;
       console.log("this.refContainerVal : ", this.refContainerVal);
     },
     refRandomRgbBtn(e) {
       console.log("e.randomRGB : ", e);
       this.refRandomRgbVal = e;
     },
+    randomSolid() {
+      this.rndRGB();
+      this.randomSolidRgb = this.$store.state.rgb;
+      console.log("this.randomGradient1 > ", this.randomRgb1);
 
-    // changeGradient() {
-    //   this.rgb1 = this.randomGrd();
-    //   this.rgb2 = this.randomGrd();
+      for (let i = 0; i < this.refContainerVal.children.length; i++) {
+        console.log("arry ref", this.refContainerVal.children[i]);
+        this.refContainerVal.children[i].classList.remove("selected");
+      }
+      this.refRandomRgbVal.classList.add("selected");
+      console.log("this.refRandomRgbVal : ", this.refRandomRgbVal);
 
-    //   console.log("this.rgb1 > ", this.rgb1);
-    //   console.log("this.rgb2 > ", this.rgb2);
-
-    //   [...backgroundBtns].forEach((e) => {
-    //     e.classList.remove("selected");
-    //   });
-    //   backgroundBtns.forEach((e) => {
-    //     e.classList.remove("selected");
-    //   });
-    //   for (let i = 0; i < backgroundBtns.length; i++) {
-    //     backgroundBtns[i].classList.remove("selected");
-    //   }
-    //   randomGradientBtn.classList.add("selected");
-
-    //   this.domBody.style.background = `linear-gradient(to bottom, #${this.rgb1}, #${this.rgb2})`;
-    //   this.preview.style.background = `linear-gradient(to bottom, #${this.rgb1}, #${this.rgb2})`;
-    // },
-    // randomGradientBtn.addEventListener('click', changeGradient);
+      this.preview = document.querySelector(".preview");
+      this.preview.style.background = `linear-gradient(to bottom, #${this.randomSolidRgb}, #${this.randomSolidRgb})`;
+      this.domBody.style.background = `linear-gradient(to bottom, #${this.randomSolidRgb}, #${this.randomSolidRgb})`;
+    },
+    refRandomSolidBtn(e) {
+      this.randomSolidVal = e;
+    },
   },
-  computed: {
-    // ...mapGetters(["randomGradient"]),
-    // randomGradient: "getRandomGradient",
-    // ...mapActions(["setActionsRandomGradient"]),
-  },
-  // watch: {
-  //   rndGrdValue(newVal, oldVal) {
-  //     this.setActionsRandomGradient(newVal);
-  //     console.log("new rndGrd : ", newVal, " old rndGrd : ", oldVal);
-  //   },
-  // },
+  computed: {},
 };
 </script>
 

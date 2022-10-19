@@ -16,24 +16,7 @@ export default createStore({
   // ** getters(변환) **
   // 밖으로 내보낼 값들(실제 컴포넌트에서 가져가 사용할 값들).
   // this.$store.getters['경로명/함수명']; 을 사용해야 한다.
-  getters: {
-    // BackgroundBtnsDiv 에서 사용할 랜덤 그라디언트
-    // randomGradient(state) {
-    //   let rgb = state.rgb;
-    //   rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-    //     .toString(16)
-    //     .padStart(2, "0");
-    //   rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-    //     .toString(16)
-    //     .padStart(2, "0");
-    //   rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-    //     .toString(16)
-    //     .padStart(2, "0");
-    //   return rgb;
-    // },
-    // 데이터에 변화를 줄 순 없다.
-    // rgb: (state) => state.rgb,
-  },
+  getters: {},
 
   // ** mutations(변이) **
   // state의 동기적 변이를 담당, Vuex저장소에서 state를 변경할 수 있는 유일한 방법
@@ -76,19 +59,6 @@ export default createStore({
     //     .toString(16)
     //     .padStart(2, "0"))
     // ),
-
-    // setChangeGradient() {
-    //   const rgb1 = randomRGB();
-    //   const rgb2 = randomRGB();
-
-    //   [...backgroundBtns].forEach((e) => {
-    //     e.classList.remove('selected');
-    //   });
-    //   randomGradientBtn.classList.add('selected');
-
-    //   domBody.style.background = `linear-gradient(to bottom, #${rgb1}, #${rgb2})`;
-    //   preview.style.background = `linear-gradient(to bottom, #${rgb1}, #${rgb2})`;
-    // },
   },
   // mutations 호출 ex) ajax와 비슷
   // ** actions(액션)**
@@ -110,8 +80,5 @@ export default createStore({
       // commit("setCategory", category);
       commit("setMutationsCategory", newCategoryVal);
     },
-    // setActionsRandomGradient({ commit }, newRndGrdVal) {
-    //   commit("setMutationsRandomGradient", newRndGrdVal);
-    // },
   },
 });

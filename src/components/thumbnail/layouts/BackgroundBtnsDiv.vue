@@ -34,8 +34,6 @@ export default {
       randomRgb2: "",
       refContainerVal: null,
       refRandomRgbVal: null,
-      rgb1: "",
-      rgb2: "",
       domBody: document.body,
       preview: null,
       randomSolidVal: "",

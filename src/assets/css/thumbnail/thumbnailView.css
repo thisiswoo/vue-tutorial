@@ -5,6 +5,7 @@
 }
 body {
   position: relative;
+  /* background: #6667ab; */
   background: #f4f4f4;
   height: 100vh;
   min-height: 1220px;

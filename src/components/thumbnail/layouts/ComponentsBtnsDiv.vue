@@ -1,7 +1,7 @@
 <template>
   <div class="components__btns">
     <span class="components__txt">썸네일 구성 요소</span>
-    <div id="component__btn__container" class="btns">
+    <div :ref="refContainer" id="component__btn__container" class="btns">
       <button
         data-set="comp__opt1"
         class="btn component__opt selected"
@@ -29,34 +29,31 @@
 
 <script>
 export default {
+  name: "ComponentsBtnDiv",
   data() {
     return {
       componentsBtns: null,
-      composition: null,
+      // composition: null,
     };
   },
   methods: {
-    prevTitleFunc() {
-      console.log("asdfsdfsf");
-      // this.componentsBtns = document.querySelectorAll(".component__opt");
-      this.composition = document.querySelector(".components");
-
-      this.changeLayout();
-
-      // this.componentsBtns.forEach((e) => {
-      //   e.addEventListener("click", this.changeLayout);
-      // });
+    refContainer(e) {
+      // this.componentsBtns = e.children;
+      this.componentsBtns = e;
     },
-    changeLayout(e) {
-      const opt = e.target.dataset.set;
-      let test = (document.querySelector(".components").id = opt);
-      console.log("test : ", test);
+    prevTitleFunc(e) {
+      console.log("e : ", e);
+      document.querySelector(".components").id = e.target.dataset.set;
 
-      this.componentsBtns.forEach((e) => {
-        e.classList.remove("selected");
-      });
+      for (let i = 0; i < this.componentsBtns.children.length; i++) {
+        this.componentsBtns.children[i].classList.remove("selected");
+      }
       e.target.classList.add("selected");
     },
+  },
+  beforeUpdate() {
+    this.componentsBtns = null;
+    console.log("1");
   },
 };
 </script>

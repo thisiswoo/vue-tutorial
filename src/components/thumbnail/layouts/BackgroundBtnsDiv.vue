@@ -38,6 +38,7 @@ export default {
       preview: null,
       randomSolidVal: "",
       imgUrlVal: "",
+      randomGradientBtn: "",
     };
   },
   methods: {
@@ -47,6 +48,8 @@ export default {
       this.randomRgb1 = this.$store.state.rgb;
       this.rndRGB();
       this.randomRgb2 = this.$store.state.rgb;
+
+      this.selectedNow(this.refRandomRgbVal);
 
       this.preview = document.querySelector(".preview");
       this.preview.style.background = `linear-gradient(to bottom, #${this.randomRgb1}, #${this.randomRgb2})`;
@@ -62,6 +65,8 @@ export default {
       this.rndRGB();
       this.randomSolidRgb = this.$store.state.rgb;
 
+      this.selectedNow(this.randomSolidVal);
+
       this.preview = document.querySelector(".preview");
       this.preview.style.background = `linear-gradient(to bottom, #${this.randomSolidRgb}, #${this.randomSolidRgb})`;
       this.domBody.style.background = `linear-gradient(to bottom, #${this.randomSolidRgb}, #${this.randomSolidRgb})`;
@@ -71,6 +76,8 @@ export default {
     },
     getImgUrl() {
       this.preview = document.querySelector(".preview");
+      this.selectedNow(this.imgUrlVal);
+
       const regex =
         /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\\+\\$,\w]+@)?[A-Za-z0-9.-]+(:[0-9]+)?|(?:www.|[-;:&=\\+\\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\\+~%\\/.\w-_]*)?\??(?:[-\\+=&;%@.\w_]*)#?(?:[\w]*))?)/;
       let imgUrl = prompt("이미지 주소를 입력하세요 😇");
@@ -92,6 +99,17 @@ export default {
     refImgUrlBtn(e) {
       this.imgUrlVal = e;
     },
+    selectedNow(value) {
+      for (let i = 0; i < this.refContainerVal.children.length; i++) {
+        this.refContainerVal.children[i].classList.remove("selected");
+      }
+      value.classList.add("selected");
+    },
+  },
+  beforeUpdate() {
+    this.refContainerVal = null; //초기화
+    this.refRandomRgbVal = null;
+    this.imgUrlVal = null;
   },
   computed: {},
 };

@@ -37,12 +37,15 @@ export default {
   },
   methods: {
     prevTitleFunc() {
-      this.componentsBtns = document.querySelectorAll(".component__opt");
+      console.log("asdfsdfsf");
+      // this.componentsBtns = document.querySelectorAll(".component__opt");
       this.composition = document.querySelector(".components");
 
-      this.componentsBtns.forEach((e) => {
-        e.addEventListener("click", this.changeLayout);
-      });
+      this.changeLayout();
+
+      // this.componentsBtns.forEach((e) => {
+      //   e.addEventListener("click", this.changeLayout);
+      // });
     },
     changeLayout(e) {
       const opt = e.target.dataset.set;

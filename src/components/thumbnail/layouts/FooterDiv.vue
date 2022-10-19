@@ -8,7 +8,6 @@
       I would like to express my gratitude to Bongseok Sa, who helped create the
       site.
     </p>
-    <p class="unsplash">Images from Unsplash</p>
   </div>
 </template>
 

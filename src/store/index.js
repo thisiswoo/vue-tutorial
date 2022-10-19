@@ -46,19 +46,6 @@ export default createStore({
         .toString(16)
         .padStart(2, "0");
     },
-
-    // setMutationsRandomGradient: (state) => (
-    //   (state.rgb = ""),
-    //   (state.rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-    //     .toString(16)
-    //     .padStart(2, "0")),
-    //   (state.rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-    //     .toString(16)
-    //     .padStart(2, "0")),
-    //   (state.rgb += (Math.floor(Math.random() * 90 + 1) + 150)
-    //     .toString(16)
-    //     .padStart(2, "0"))
-    // ),
   },
   // mutations 호출 ex) ajax와 비슷
   // ** actions(액션)**

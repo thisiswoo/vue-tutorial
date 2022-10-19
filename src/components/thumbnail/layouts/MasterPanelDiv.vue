@@ -1,17 +1,24 @@
 <template>
   <div class="master__panel">
     <button class="btn" id="initialize" @click="initBtn">초기화</button>
-    <button class="btn" id="export">완료 및 이미지화</button>
+    <button class="btn" id="export" @click="produceImageBtn">
+      완료 및 이미지화
+    </button>
   </div>
 </template>
 
 <script>
+import html2canvas from "html2canvas";
+
 export default {
   name: "MasterPanelDiv",
   data() {
     return {
       domBody: document.body,
     };
+  },
+  mounted() {
+    this.initBtn();
   },
   methods: {
     initBtn() {
@@ -56,6 +63,20 @@ export default {
       componentsBtns[0].classList.add("selected");
       inputFields[0].focus();
       document.querySelector(".components").id = "comp__opt1";
+    },
+    produceImageBtn() {
+      const captureModal = document.querySelector(".capture_modal");
+      const mod = document.querySelectorAll(".mod");
+      html2canvas(document.querySelector("#capture"), {
+        logging: true, //디버그 목적으로 로깅 활성화
+        letterRendering: 1,
+        allowTaint: true, //교차 출처 이미지가 캔버스를 오염시키는 것을 허용할지 여부
+        useCORS: true, //CORS를 사용하여 서버에서 이미지 로드 시도 여부
+      }).then((canvas) => {
+        captureModal.appendChild(canvas).classList.add("canvas"); //appendChild : 선택한 요소 안에 자식요소를 추가한다.
+        console.log("canvas : ", canvas);
+      });
+      mod.forEach((e) => e.classList.remove("hidden"));
     },
   },
 };

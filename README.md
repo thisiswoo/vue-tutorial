@@ -1,10 +1,8 @@
-# vue-tutorial
+## vue-tutorial
 
-```
 **[Thumbnail Maker](https://devfolio.kr/project/24)**
 
 위 토이 프로젝트를 vue.js로 리펙토링.
-```
 
 ## Project version
 
@@ -18,7 +16,7 @@ vue-router : 4.0.3
 html2canvas : 1.4.1
 ```
 
-### 도움을 준 사람
+## 도움을 준 고마운 사람들
 
 ```
 사봉석, 김태준

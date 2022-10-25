@@ -28,17 +28,18 @@ export default {
       // this.textStyleBtns = e.children;
       this.textStyleBtns = e;
     },
-    textShadowBtn(e) {
-      const renderTxt = document.querySelectorAll(".render");
-      e.target.classList.toggle("selected"); // .toggle()은 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 한다
-      renderTxt.forEach((item) => {
-        if (e.target.classList.contains("selected")) {
-          //contains() : 텍스트 검색
-          item.style.textShadow = "4px 4px 8px rgba(0,0,0,1.4)";
-        } else {
-          item.style.textShadow = "";
-        }
-      });
+    textShadowBtn() {
+      this.$emit("toggleShadow");
+      // const renderTxt = document.querySelectorAll(".render");
+      // e.target.classList.toggle("selected"); // .toggle()은 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 한다
+      // renderTxt.forEach((item) => {
+      //   if (e.target.classList.contains("selected")) {
+      //     //contains() : 텍스트 검색
+      //     item.style.textShadow = "4px 4px 8px rgba(0,0,0,1.4)";
+      //   } else {
+      //     item.style.textShadow = "";
+      //   }
+      // });
     },
     textInvertBtn(e) {
       e.target.classList.toggle("selected");

@@ -2,12 +2,17 @@
   <section class="wrapper">
     <article class="contents">
       <HeaderDiv />
-      <PreviewDiv :title="title" :subTitle="subTitle" :category="category" />
+      <PreviewDiv
+        :title="title"
+        :subTitle="subTitle"
+        :category="category"
+        :isShadow="isShadow"
+      />
       <div class="control__panel">
         <InputFieldsDiv />
         <BackgroundBtnsDiv />
         <ComponentsBtnsDiv />
-        <TextStyleDiv />
+        <TextStyleDiv @toggleShadow="toggleShadow" />
         <MasterPanelDiv />
       </div>
     </article>
@@ -35,6 +40,16 @@ export default {
   name: "App",
   computed: {
     ...mapState(["title", "subTitle", "category"]),
+  },
+  data() {
+    return {
+      isShadow: false,
+    };
+  },
+  methods: {
+    toggleShadow() {
+      this.isShadow = !this.isShadow;
+    },
   },
   components: {
     HeaderDiv,

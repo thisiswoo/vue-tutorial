@@ -1,24 +1,23 @@
 # vue-tutorial
 
-## Project setup
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+[thumbnail maker](https://devfolio.kr/project/24)의 토이 프로젝트를 vue.js로 리펠토링.
 ```
 
-### Compiles and minifies for production
+## Project version
+
 ```
-npm run build
+node : 16.18.0
+
+vue : 3.2.13
+vuex : 4.0.0
+vue-router : 4.0.3
+
+html2canvas : 1.4.1
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 도움을 준 사람
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+사봉석, 김태준
+```

@@ -1,7 +1,7 @@
 # vue-tutorial
 
 ```
-[thumbnail maker](https://devfolio.kr/project/24)의 토이 프로젝트를 vue.js로 리펠토링.
+[thumbnail maker](https://devfolio.kr/project/24). 의 토이 프로젝트를 vue.js로 리펠토링.
 ```
 
 ## Project version

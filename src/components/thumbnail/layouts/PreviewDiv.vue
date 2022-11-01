@@ -19,13 +19,18 @@ import { mapState } from "vuex";
 
 export default {
   name: "PreviewDiv",
+  data() {
+    return {
+      shadowValue: "",
+    };
+  },
   props: ["isShadow"],
   computed: {
     ...mapState(["title", "subTitle", "category"]),
   },
   watch: {
     isShadow() {
-      this.shadowValue = this.shadowValue ? "4px 4px 8px rgba(0,0,0,1.4)" : "";
+      this.shadowValue = !this.shadowValue ? "4px 4px 8px rgba(0,0,0,1.4)" : "";
     },
   },
 };
